@@ -19,8 +19,21 @@ const { description, title } = Astro.props
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href="/nicoplacente.webp" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#fef08a">
+    <meta name="keywords" content="Portfolio, Trabajo, Desarrollo Full Stack, Programacion, Edicion, Produccion Musical">
+    <meta name="author" content="Nico Placente">
+
+    <meta property="og:title" content="Portfolio Nico Placente">
+    <meta property="og:description" content={description}>
+    <meta property="og:image" content="/nicoplacente.webp">
+    <meta property="og:image:alt" content="Nico Placente">
+    
+    <link rel="canonical" href="URL pagina original">
+
     <title>{title}</title>
     <ViewTransitions />
   </head>
