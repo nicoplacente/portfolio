@@ -1,5 +1,5 @@
 ---
-const currentYear = new Date().getFullYear()
+const currentYear = new Date().getFullYear();
 ---
 
 <footer
@@ -10,7 +10,16 @@ const currentYear = new Date().getFullYear()
   >
     <span class="text-sm sm:text-center text-zinc-800/90 dark:text-zinc-200/90"
       >© {currentYear}
-      <a href="https://www.linkedin.com/in/nicolas-placente-366627291/" class="hover:underline">nicoplacente</a>. Todos los derechos reservados
+      <a
+        href="https://www.linkedin.com/in/nicolas-placente-366627291/"
+        class="hover:underline"
+        target="_blank">nicoplacente</a
+      >. Portfolio inspirado en
+      <a
+        href="https://github.com/midudev"
+        class="hover:underline"
+        target="_blank">midudev</a
+      >
     </span>
     <ul
       class="flex flex-wrap items-center mt-3 text-sm font-medium dark:text-white/90 sm:mt-0"
@@ -19,7 +28,9 @@ const currentYear = new Date().getFullYear()
         <a href="/#sobre-mi" class="hover:underline me-4 md:me-6">Sobre mí</a>
       </li>
       <li>
-        <a id="contacto" href="mailto:miduga@gmail.com" class="hover:underline">Contacto</a>
+        <a id="contacto" href="mailto:miduga@gmail.com" class="hover:underline"
+          >Contacto</a
+        >
       </li>
     </ul>
   </div>
