@@ -9,6 +9,8 @@ import HTML from "./icons/HTML.astro";
 import CSS from "./icons/CSS.astro";
 import React from "./icons/React.astro";
 import MongoDB from "./icons/MongoDB.astro";
+import Nodejs from "./icons/Nodejs.astro";
+import ASTRO from "./icons/ASTRO.astro";
 
 const TAGS = {
   MongoDB: {
@@ -41,6 +43,17 @@ const TAGS = {
     class: "bg-[#4ad5ff99] text-white",
     icon: React,
   },
+
+  Nodejs: {
+    name: "Nodejs",
+    class: "bg-[#46473d] text-[#87cf30]",
+    icon: Nodejs,
+  },
+  ASTRO: {
+    name: "Astro",
+    class: "bg-[#ff6209] text-white",
+    icon: ASTRO,
+  },
 };
 const PROJECTS = [
   {
@@ -50,9 +63,20 @@ const PROJECTS = [
     link: "https://autenticos.onrender.com/",
     github: "https://github.com/nicoplacente",
     image: "/projects/autenticos.webp",
-    tags: [TAGS.React, TAGS.TAILWIND, TAGS.JavaScript, TAGS.MongoDB],
+    tags: [TAGS.React, TAGS.TAILWIND, TAGS.Nodejs, TAGS.MongoDB],
+  },
+  {
+    title: "CODELUXE",
+    description:
+      "Emprendimiento realizado junto a un grupo de amigos para trabajar de forma Freelance vendiendo servicios de Desarrollo Web FullStack, Edición de Video, Producción Musical, Diseño Gráfico y de Logos y Marketing Digital",
+    link: "https://codeluxe.tech",
+    github: "https://github.com/nicoplacente",
+    image: "/projects/codeluxe.webp",
+    tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.JavaScript],
   },
 ];
+
+// img en shots x: 20 y:3 para que queden todas iguales
 ---
 
 <div class="flex flex-col gap-y-16">
