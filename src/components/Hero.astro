@@ -1,11 +1,12 @@
 ---
-const personalImageAlt = "Nico Placente"
-import Badge from "@/components/Badge.astro"
-import LinkedInIcon from "@/components/icons/LinkedIn.astro"
-import MailIcon from "@/components/icons/Mail.astro"
-import SocialPill from "@/components/SocialPill.astro"
-import Location from '../components/icons/Location.astro'
-import GitHub from "./icons/GitHub.astro"
+const personalImageAlt = "Nico Placente";
+import Badge from "@/components/Badge.astro";
+import LinkedInIcon from "@/components/icons/LinkedIn.astro";
+import MailIcon from "@/components/icons/Mail.astro";
+import SocialPill from "@/components/SocialPill.astro";
+import Location from "../components/icons/Location.astro";
+import GitHub from "./icons/GitHub.astro";
+import Download from "./icons/Download.astro";
 ---
 
 <div class="max-w-xl">
@@ -35,11 +36,12 @@ import GitHub from "./icons/GitHub.astro"
   >
     +2 años de experiencia. <strong
       >Desarrollador, Programador Full Stack y Productor Musical</strong
-    > Especializado en el desarrollo de aplicaciones web
-    únicas.
+    > Especializado en el desarrollo de aplicaciones web únicas.
   </p>
 
-  <p class="text-red-200/90 text-xl flex items-center gap-2 mt-4 text-pretty"><Location /> Coronel Suárez - Buenos Aires - Argentina</p>
+  <p class="text-red-200/90 text-xl flex items-center gap-2 mt-4 text-pretty">
+    <Location /> Coronel Suárez - Buenos Aires - Argentina
+  </p>
   <nav class="flex flex-wrap gap-4 mt-8">
     <SocialPill href="mailto:nicolasplacente@gmail.com">
       <MailIcon class="size-4" />
@@ -50,8 +52,12 @@ import GitHub from "./icons/GitHub.astro"
       LinkedIn
     </SocialPill>
     <SocialPill href="https://github.com/nicoplacente">
-      <GitHub class="size-4"/>
+      <GitHub class="size-4" />
       Github
+    </SocialPill>
+    <SocialPill href="/cv.docx" download="cv texto plano">
+      <Download class="size-4" />
+      Descargar cv
     </SocialPill>
   </nav>
 </div>
