@@ -85,7 +85,7 @@ const PROJECTS = [
     description:
       "WK Services es un proyecto innovador de reparación de electrodomésticos en Coronel Suárez, con una interfaz moderna, un dashboard de gestión de reparaciones y clientes, y un enfoque en la seguridad.",
     link: "https://wk-services.vercel.app/",
-    image: "/projects/wk-services.webp",
+    image: "/projects/wkservices.webp",
     tags: [TAGS.Next, TAGS.TAILWIND, TAGS.Prisma, TAGS.PostgreSQL],
   },
   {
@@ -153,7 +153,7 @@ const PROJECTS = [
               {description}
             </div>
             <footer class="flex items-end justify-start mt-4 gap-x-4">
-              <LinkButton href={link ?? "/"}>
+              <LinkButton href={link ?? "/"} target={link ? "_blank" : "_top"}>
                 <Link class="size-4" />
                 {link ? "Preview" : "Link privado"}
               </LinkButton>
