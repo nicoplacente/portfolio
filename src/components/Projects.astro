@@ -153,9 +153,12 @@ const PROJECTS = [
               {description}
             </div>
             <footer class="flex items-end justify-start mt-4 gap-x-4">
-              <LinkButton href={link ?? "/"} target={link ? "_blank" : "_top"}>
+              <LinkButton
+                href={link ?? undefined}
+                target={link ? "_blank" : undefined}
+              >
                 <Link class="size-4" />
-                {link ? "Preview" : "Link privado"}
+                Preview
               </LinkButton>
             </footer>
           </div>
