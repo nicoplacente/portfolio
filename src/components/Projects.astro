@@ -1,5 +1,5 @@
 ---
-import GitHub from "./icons/GitHub.astro";
+// import GitHub from "./icons/GitHub.astro";
 import NextJS from "./icons/NextJS.astro";
 import Tailwind from "./icons/Tailwind.astro";
 import Link from "./icons/Link.astro";
@@ -73,42 +73,27 @@ const TAGS = {
 };
 const PROJECTS = [
   {
-    title: "Auténticos",
+    title: "Codeluxe",
     description:
-      "Proyecto real realizado para Laureano Gieco (creador de contenido) para facilitar la venta y organización de sus mentorías sobre mentalidad. Esta página consta de autenticación, SEO, base de datos, roles de usuarios, pasarela de pagos como Mercado Pago y Binance, dashboard de administrador y de usuarios, servidor y buena UX/UI",
-    link: "https://autenticos.onrender.com/",
-    image: "/projects/autenticos.webp",
-    tags: [TAGS.React, TAGS.TAILWIND, TAGS.Nodejs, TAGS.MongoDB],
+      "Codeluxe es un emprendimiento freelance cofundado junto a un amigo, enfocado en el desarrollo de aplicaciones web personalizadas y marketing digital con enfoque en copywriting persuasivo.",
+    link: "https://codeluxe.vercel.app",
+    image: "/projects/codeluxe.webp",
+    tags: [TAGS.Next, TAGS.TAILWIND, TAGS.JavaScript],
   },
   {
-    title: "WK Services",
+    title: "TheMenu (Solo UI)",
     description:
-      "WK Services es un proyecto innovador de reparación de electrodomésticos en Coronel Suárez, con una interfaz moderna, un dashboard de gestión de reparaciones y clientes, y un enfoque en la seguridad.",
-    link: "https://wk-services.vercel.app/",
-    image: "/projects/wkservices.webp",
+      "TheMenu fue un emprendimiento orientado a digitalizar cartas de restaurantes mediante suscripciones mensuales. El proyecto fue descartado y no continuará en desarrollo. Actualmente, solo se conserva la interfaz visual como muestra en el portfolio. La app no está operativa, pero el código completo está disponible en GitHub como repositorio público.",
+    link: "https://themenu-yourcard.vercel.app/",
+    image: "/projects/themenu.webp",
     tags: [TAGS.Next, TAGS.TAILWIND, TAGS.Prisma, TAGS.PostgreSQL],
   },
   {
-    title: "CODELUXE",
+    title: "Auténticos",
     description:
-      "Emprendimiento realizado para trabajar de forma Freelance brindando servicios de Desarrollo Web FullStack, Edición de Video, Producción Musical, Diseño Gráfico y de Logos y Marketing Digital",
-    link: "https://codeluxe.tech",
-    image: "/projects/codeluxe.webp",
-    tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.JavaScript],
-  },
-  {
-    title: "La Mestiza",
-    description:
-      "Página web para La Mestiza (restaurante), que ofrece una experiencia única a sus clientes. Mediante un código QR, los usuarios pueden acceder a una plataforma que proporciona información sobre el lugar, incluyendo datos de contacto, ubicación, la carta presentada de manera estética y original. Cuenta con una óptima optimización y SEO para mejorar su visibilidad.",
-    link: "https://lamestiza.netlify.app/",
-    image: "/projects/mestiza.webp",
-    tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.JavaScript],
-  },
-  {
-    title: "Club Deportivo Sarmiento",
-    description:
-      "Deportivo Sarmiento es un club deportivo para el cual se desarrolló una aplicación web que facilita la administración del flujo de socios, tipos de socios, cobradores, recibos, gastos, y proporciona estadísticas sobre métodos de pago, entre otras funcionalidades. Se trata de una aplicación muy completa y con altos estándares de seguridad.",
-    image: "/projects/deportivo.webp",
+      "Fue un proyecto real para la venta y gestión de mentorías de Laureano Gieco. Incluye autenticación, roles, pasarela de pagos, dashboard y optimización SEO. Actualmente, la web no está en uso por decisión del cliente.",
+    link: "https://autenticos.onrender.com/",
+    image: "/projects/autenticos.webp",
     tags: [TAGS.React, TAGS.TAILWIND, TAGS.Nodejs, TAGS.MongoDB],
   },
 ];
@@ -149,14 +134,9 @@ const PROJECTS = [
               ))}
             </ul>
 
-            <div class="mt-2 text-gray-700 dark:text-gray-400">
-              {description}
-            </div>
+            <p class="mt-2 text-gray-700 dark:text-gray-400">{description}</p>
             <footer class="flex items-end justify-start mt-4 gap-x-4">
-              <LinkButton
-                href={link ?? undefined}
-                target={link ? "_blank" : undefined}
-              >
+              <LinkButton href={link} target="_blank">
                 <Link class="size-4" />
                 Preview
               </LinkButton>
@@ -167,3 +147,11 @@ const PROJECTS = [
     ))
   }
 </div>
+
+<!-- <LinkButton
+href={link ?? undefined}
+target={link ? "_blank" : undefined}
+>
+<Link class="size-4" />
+Preview
+</LinkButton> -->

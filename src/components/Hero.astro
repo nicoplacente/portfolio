@@ -7,6 +7,7 @@ import SocialPill from "@/components/SocialPill.astro";
 import Location from "../components/icons/Location.astro";
 import GitHub from "./icons/GitHub.astro";
 import Download from "./icons/Download.astro";
+import Whatsapp from "./icons/Whatsapp.astro";
 ---
 
 <div class="max-w-xl">
@@ -34,9 +35,8 @@ import Download from "./icons/Download.astro";
   <p
     class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
   >
-    +2 años de experiencia. <strong
-      >Desarrollador, Programador Full Stack</strong
-    > Especializado en el desarrollo de aplicaciones web únicas.
+    +3 años de experiencia. <strong>Desarrollador FullStack</strong> Especializado
+    en el desarrollo de aplicaciones web únicas.
   </p>
 
   <p class="text-red-200/90 text-xl flex items-center gap-2 mt-4 text-pretty">
@@ -55,9 +55,13 @@ import Download from "./icons/Download.astro";
       <GitHub class="size-4" />
       Github
     </SocialPill>
-    <SocialPill href="/cv.pdf" download="cv texto plano">
+    <SocialPill href="https://wa.me/2926402409">
+      <Whatsapp class="size-4" />
+      Whatsapp
+    </SocialPill>
+    <SocialPill href="/cv.pdf" download="CV - Nico Placente">
       <Download class="size-4" />
-      Descargar cv
+      Descargar CV
     </SocialPill>
   </nav>
 </div>

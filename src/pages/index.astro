@@ -1,27 +1,28 @@
 ---
-import Layout from "@/layouts/Layout.astro"
+import Layout from "@/layouts/Layout.astro";
 
-import AboutMe from "@/components/AboutMe.astro"
-import Briefcase from "@/components/icons/Briefcase.astro"
-import CodeIcon from "@/components/icons/Code.astro"
-import Experience from "@/components/Experience.astro"
-import ProfileCheck from "@/components/icons/ProfileCheck.astro"
-import Projects from "@/components/Projects.astro"
-import SectionContainer from "@/components/SectionContainer.astro"
-import Hero from "@/components/Hero.astro"
+import AboutMe from "@/components/AboutMe.astro";
+import Briefcase from "@/components/icons/Briefcase.astro";
+import CodeIcon from "@/components/icons/Code.astro";
+import Experience from "@/components/Experience.astro";
+import ProfileCheck from "@/components/icons/ProfileCheck.astro";
+import Projects from "@/components/Projects.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
+import Hero from "@/components/Hero.astro";
+import LinkButton from "@/components/LinkButton.astro";
+import GitHub from "@/components/icons/GitHub.astro";
 ---
 
 <Layout
   title="Nico Placente - Portfolio"
   description="Contrata a Nico Placente. Desarrollador y Programador Full Stack. Si estás buscando un desarrollador comprometido y creativo listo para asumir nuevos desafíos, estoy aquí para contribuir al éxito de tu proyecto."
 >
-  <main class="px-4">
+  <main class="px-0 sm:px-4">
     <SectionContainer class="py-16 md:py-36">
-      <Hero>
-      </slot>
-    </Hero>
+      <Hero />
     </SectionContainer>
-    <div class="space-y-24">
+  </main>
+  <div class="space-y-24">
     <SectionContainer id="experiencia">
       <h2
         class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
@@ -34,12 +35,27 @@ import Hero from "@/components/Hero.astro"
 
     <SectionContainer id="proyectos">
       <h2
-        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+        class="flex items-center mb-2 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
       >
         <CodeIcon class="size-7" />
         Proyectos
       </h2>
+      <p
+        class="mb-6 text-gray-700 dark:text-gray-400 text-pretty text-xs sm:text-sm"
+      >
+        No todos mis proyectos se encuentran en el portfolio o en GitHub, ya que
+        muchos son privados por requerimientos de confidencialidad, protección
+        de datos o propiedad del código por parte de los clientes.
+      </p>
       <Projects />
+      <LinkButton
+        className={"w-full max-w-full mt-9"}
+        target="_blank"
+        href="https://github.com/nicoplacente"
+        >Más proyectos en <GitHub
+          class="bg-black/30 p-2 size-9 rounded-full"
+        /></LinkButton
+      >
     </SectionContainer>
 
     <SectionContainer id="sobre-mi">
@@ -52,5 +68,4 @@ import Hero from "@/components/Hero.astro"
       <AboutMe />
     </SectionContainer>
   </div>
-  </main>
 </Layout>
