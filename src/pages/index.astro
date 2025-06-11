@@ -11,6 +11,7 @@ import SectionContainer from "@/components/SectionContainer.astro";
 import Hero from "@/components/Hero.astro";
 import LinkButton from "@/components/LinkButton.astro";
 import GitHub from "@/components/icons/GitHub.astro";
+import Education from "@/components/Education.astro";
 ---
 
 <Layout
@@ -28,7 +29,7 @@ import GitHub from "@/components/icons/GitHub.astro";
         class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
       >
         <Briefcase class="size-8" />
-        Experiencia + Certificados
+        Experiencia
       </h2>
       <Experience />
     </SectionContainer>
@@ -52,10 +53,18 @@ import GitHub from "@/components/icons/GitHub.astro";
         className={"w-full max-w-full mt-9"}
         target="_blank"
         href="https://github.com/nicoplacente"
-        >Más proyectos en <GitHub
-          class="bg-black/30 p-2 size-9 rounded-full"
-        /></LinkButton
+        >Más proyectos en <GitHub /></LinkButton
       >
+    </SectionContainer>
+
+    <SectionContainer id="educacion">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+      >
+        <Briefcase class="size-8" />
+        Educación
+      </h2>
+      <Education />
     </SectionContainer>
 
     <SectionContainer id="sobre-mi">

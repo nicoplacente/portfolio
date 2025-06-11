@@ -1,0 +1,36 @@
+---
+import EducationItem from "./EducationItem.astro";
+const EDUCATION = [
+  //   {
+  //     title: "Certificado de Prácticas Laborales",
+  //     empresa: "Awaq ACI",
+  //     description:
+  //       "Reponsable de Frontend, diseño y comunicación. Trabajando con TypeScript, React, Redux, Tailwind y Azure para el deploy. Un equipo de 7 personas realizamos la pasantía de esta ONGD Multinacional que duró desde el 6 de enero hasta el 9 de febrero de 2024",
+  //     link: "https://www.somosawaq.org/",
+  //     img: "/education/DiplomaAwaq.png",
+  //   },
+  {
+    title: "Autodidacta",
+    empresa: "Diversas Plataformas",
+    description:
+      "Siempre sentí curiosidad por entender cómo funcionan las cosas y resolver problemas por mi cuenta. Esta actitud me llevó a aprender programación investigando, practicandoy creando proyectos reales más allá de los cursos formales, lo que reforzó mi capacidadde adaptación y aprendizaje continuo.",
+    img: "/education/autodidacta.webp",
+  },
+  {
+    title: "Certificado de Graduación",
+    empresa: "Henry",
+    description:
+      "+800 hs de formación teórico-práctica en HTML, CSS, JavaScript, React, Redux, Node.js, Express, Sequelize y PostgreSQL.",
+    link: "https://www.soyhenry.com/",
+    img: "/education/DiplomaHenry.png",
+  },
+];
+---
+
+{
+  EDUCATION.map((education) => (
+    <div class="my-12">
+      <EducationItem {...education} />
+    </div>
+  ))
+}

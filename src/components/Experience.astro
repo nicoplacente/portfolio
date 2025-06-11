@@ -1,29 +1,31 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro";
-const EXPERIENCIE = [
+const EXPERIENCE = [
   {
-    title: "Certificado de Prácticas Laborales",
-    empresa: "Awaq ACI",
+    date: "Actualmente...",
+    title: "Emprendimiento Freelance",
+    company: "Codeluxe",
     description:
-      "Reponsable de Frontend, diseño y comunicación. Trabajando con TypeScript, React, Redux, Tailwind y Azure para el deploy. Un equipo de 7 personas realizamos la pasantía de esta ONGD Multinacional que duró desde el 6 de enero hasta el 9 de febrero de 2024",
-    link: "https://www.somosawaq.org/",
-    img: "/experience/DiplomaAwaq.png",
+      "Codeluxe es un emprendimiento freelance cofundado junto a un amigo, enfocado en el desarrollo de aplicaciones web personalizadas y marketing digital con enfoque en copywriting persuasivo.",
+    link: "https://codeluxe.vercel.app",
   },
   {
-    title: "Certificado de Graduación",
-    empresa: "Henry",
+    date: "Enero 2023",
+    title: "Prácticas Laborales",
+    company: "Awaq ACI",
     description:
-      "Certificado de Desarrollador Full Stack con +800 horas de cursada con teoria y ejercicios practicos individuales y grupales donde aprendimos HTML, CSS, JavaScript, React, Redux, Nodejs, Express, Sequelize, PostgreSQL",
-    link: "https://www.soyhenry.com/",
-    img: "/experience/DiplomaHenry.png",
+      "Responsable de Frontend, diseño y comunicación en una pasantía para una ONGD multinacional. Trabajé con tecnologías como TypeScript, React, Redux y Tailwind CSS, y colaboré en el despliegue mediante Azure. Formé parte de un equipo de 7 personas, desarrollando soluciones durante el período comprendido entre el 6 de enero y el 9 de febrero de 2024.",
+    link: "https://www.linkedin.com/in/nicoplacente/details/recommendations/",
   },
 ];
 ---
 
-{
-  EXPERIENCIE.map((experiencie) => (
-    <div class="my-12">
-      <ExperienceItem {...experiencie} />
-    </div>
-  ))
-}
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>

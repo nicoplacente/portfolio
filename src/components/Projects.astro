@@ -13,6 +13,7 @@ import Nodejs from "./icons/Nodejs.astro";
 import ASTRO from "./icons/ASTRO.astro";
 import Postgresql from "./icons/Postgresql.astro";
 import Prisma from "./icons/Prisma.astro";
+import GitHub from "./icons/GitHub.astro";
 
 const TAGS = {
   MongoDB: {
@@ -77,6 +78,7 @@ const PROJECTS = [
     description:
       "Codeluxe es un emprendimiento freelance cofundado junto a un amigo, enfocado en el desarrollo de aplicaciones web personalizadas y marketing digital con enfoque en copywriting persuasivo.",
     link: "https://codeluxe.vercel.app",
+    githubLink: "https://github.com/nicoplacente/codeluxe",
     image: "/projects/codeluxe.webp",
     tags: [TAGS.Next, TAGS.TAILWIND, TAGS.JavaScript],
   },
@@ -85,6 +87,7 @@ const PROJECTS = [
     description:
       "TheMenu fue un emprendimiento orientado a digitalizar cartas de restaurantes mediante suscripciones mensuales. El proyecto fue descartado y no continuará en desarrollo. Actualmente, solo se conserva la interfaz visual como muestra en el portfolio. La app no está operativa, pero el código completo está disponible en GitHub como repositorio público.",
     link: "https://themenu-yourcard.vercel.app/",
+    githubLink: "https://github.com/nicoplacente/the-menu",
     image: "/projects/themenu.webp",
     tags: [TAGS.Next, TAGS.TAILWIND, TAGS.Prisma, TAGS.PostgreSQL],
   },
@@ -93,17 +96,16 @@ const PROJECTS = [
     description:
       "Fue un proyecto real para la venta y gestión de mentorías de Laureano Gieco. Incluye autenticación, roles, pasarela de pagos, dashboard y optimización SEO. Actualmente, la web no está en uso por decisión del cliente.",
     link: "https://autenticos.onrender.com/",
+    githubLink: "https://github.com/nicoplacente/autenticos",
     image: "/projects/autenticos.webp",
     tags: [TAGS.React, TAGS.TAILWIND, TAGS.Nodejs, TAGS.MongoDB],
   },
 ];
-
-// img en shots x: 20 y:3 para que queden todas iguales
 ---
 
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, tags, link }) => (
+    PROJECTS.map(({ image, title, description, tags, link, githubLink }) => (
       <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
         <div class="w-full md:w-1/2">
           <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
@@ -135,7 +137,11 @@ const PROJECTS = [
             </ul>
 
             <p class="mt-2 text-gray-700 dark:text-gray-400">{description}</p>
-            <footer class="flex items-end justify-start mt-4 gap-x-4">
+            <footer class="flex justify-start mt-4 gap-x-4">
+              <LinkButton href={githubLink} target="_blank">
+                <GitHub class="size-4" />
+                Code
+              </LinkButton>
               <LinkButton href={link} target="_blank">
                 <Link class="size-4" />
                 Preview
