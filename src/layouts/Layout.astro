@@ -37,11 +37,8 @@ const { description, title } = Astro.props;
 
     <meta property="og:url" content="https://nicoplacente.netlify.app" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Portfolio Nico Placente" />
-    <meta
-      property="og:description"
-      content="Contrata a Nico Placente. Desarrollador y Programador Full Stack. Si estás buscando un desarrollador comprometido y creativo listo para asumir nuevos desafíos, estoy aquí para contribuir al éxito de tu proyecto."
-    />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
     <meta
       property="og:image"
       content="https://nicoplacente.netlify.app/nicoplacente-metadata.png"
@@ -50,11 +47,8 @@ const { description, title } = Astro.props;
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="twitter:domain" content="nicoplacente.netlify.app" />
     <meta property="twitter:url" content="https://nicoplacente.netlify.app" />
-    <meta name="twitter:title" content="Portfolio Nico Placente" />
-    <meta
-      name="twitter:description"
-      content="Contrata a Nico Placente. Desarrollador y Programador Full Stack. Si estás buscando un desarrollador comprometido y creativo listo para asumir nuevos desafíos, estoy aquí para contribuir al éxito de tu proyecto."
-    />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
     <meta
       name="twitter:image"
       content="https://nicoplacente.netlify.app/nicoplacente-metadata.png"
