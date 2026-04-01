@@ -3,6 +3,7 @@ const { href, className, target } = Astro.props;
 ---
 
 <a
+  {...Astro.props}
   href={href}
   role="link"
   target={target ?? "_self"}

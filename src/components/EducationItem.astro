@@ -1,4 +1,7 @@
 ---
+import Link from "./icons/Link.astro";
+import LinkButton from "./LinkButton.astro";
+
 const { title, empresa, description, link, img } = Astro.props;
 ---
 
@@ -26,8 +29,20 @@ const { title, empresa, description, link, img } = Astro.props;
       {empresa}
     </h4>
 
-    <div class="flex flex-wrap mt-2">
+    <div class="flex flex-wrap mt-2 mb-4">
       <p class="mt-2 text-gray-700 dark:text-gray-400">{description}</p>
     </div>
+    {
+      link && (
+        <LinkButton
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >
+          <Link class="size-4" />
+          Certificado
+        </LinkButton>
+      )
+    }
   </div>
 </article>
